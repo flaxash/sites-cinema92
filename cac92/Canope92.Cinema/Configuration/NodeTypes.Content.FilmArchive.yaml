@@ -1,0 +1,10 @@
+---
+#########################################################################################
+# Un node de type Content pour afficher les infos et ressources d'un film archivé
+#########################################################################################
+
+'Canope92.Cinema:FilmArchive':
+  superTypes:
+    'Canope92.Cinema:Film': TRUE
+  ui:
+    label: 'Film archivé'

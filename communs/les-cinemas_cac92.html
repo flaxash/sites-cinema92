@@ -1,0 +1,48 @@
+<div>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 700px !important;
+	   width:100%;
+	   margin-left:0px !important;
+      }
+    </style>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css"rel="stylesheet" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script>
+
+// This example enables Sign In by loading the Maps API with the signed_in
+// parameter set to true. For example:
+// https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 10,
+    center: {lat: 48.85, lng: 2.20}
+  });
+  /* // pour le site école
+  
+  var ctaLayer = new google.maps.KmlLayer({
+    url: 'https://www.google.com/maps/d/kml?mid=1CQoQyPCRwEjhzpn3d4Ynoy6Tx2M',
+    map: map
+  });
+  */
+  var ctaLayer = new google.maps.KmlLayer({
+    url: 'https://www.google.com/maps/d/kml?mid=1Gg7EJfpnPxk3nrpSACdADKpgiQc',
+    map: map
+  });
+  }
+</script>
+<h3><i class="uk-icon-dot-circle-o uk-icon-medium uk-align-left"></i>Les cinémas partenaires dans le département des Hauts-de-Seine</h3>
+<div id="map"></div>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPDYHugcYH1IuIyZ5C41zBJ3RTWImXy6A&callback=initMap">
+ </script>
+<p>Cliquez sur les repères pour accéder aux informations des salles de cinéma partenaires du dispositi</p>
+</div>

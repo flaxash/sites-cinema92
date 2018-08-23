@@ -1,0 +1,119 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace media=Neos\Media\ViewHelpers}
+
+<style>
+<f:if condition="{topimage}">
+    <f:then>
+    .top {    
+    background: url({media:uri.image(image:topimage)}) no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: 50% 50%;
+    }
+    </f:then>
+    <f:else>
+    .top {    
+    background: url("http://dummyimage.com/1300x500/000/ffffff.png") no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: 50% 50%;
+    }
+    </f:else>
+</f:if>
+</style>
+<section class="top">	
+			<div class="wrapper content_header clearfix">
+				<div class="work_nav">
+							
+					<ul class="btn clearfix">
+						<f:if condition="{previousFilm}">
+                        <li><a href="{neos:uri.node(node: previousFilm)}" class="previous" data-title="Précédent"></a></li>
+                        </f:if>
+						<li><a href="les-films.html" class="grid" data-title="Tous les films"></a></li>
+                        <f:if condition="{nextFilm}">
+						<li><a href="{neos:uri.node(node: nextFilm)}" class="next" data-title="Suivant"></a></li>
+                        </f:if>
+					</ul>							
+					
+				</div><!-- end work_nav -->
+				<h1 class="title">{neos:contentElement.editable(property: 'titre')}</h1>
+			</div>		
+</section><!-- end top -->
+<section class="infos">
+    <div>
+        {neos:contentElement.editable(property: 'realisateur', tag: 'h3')}
+    </div>
+    <div>
+        <h3 class="uk-text-muted">Thématique : {neos:contentElement.editable(property: 'theme', tag: 'span')}</h3>
+    </div>
+    <div>
+        <h3 class="film"><i class="uk-icon-exclamation uk-icon-medium uk-align-left"></i>Disponible au prêt en médiathèque</h3>
+    </div>
+    <div class="uk-grid uk-grid-large" id="encart_infos">
+        <div class="uk-width-medium-1-2">
+             <h3 class="film"><i class="uk-icon-info-circle uk-icon-medium uk-align-left"></i>Informations sur le film</h3>
+            <div class="uk-block block_film">
+                <div>
+                    {neos:contentElement.editable(property: 'genre')}
+                </div>
+                <div>
+                    {neos:contentElement.editable(property: 'producteur')}
+                </div>
+                <div>
+                    {neos:contentElement.editable(property: 'musique')}
+                </div>
+                <div>
+                    {neos:contentElement.editable(property: 'duree')}
+                </div>
+                <div>
+                    {neos:contentElement.editable(property: 'pays')}
+                </div>
+                <div>
+                    {neos:contentElement.editable(property: 'annee')}
+                </div>
+            </div>
+        </div>
+         <div class="uk-width-medium-1-2" style="display:block; padding-top:.83em; padding-left:50px; text-align:center;">
+            <!-- <h3 class="film affiche"><i class="uk-icon-photo uk-icon-medium uk-align-left"></i>Affiche du film</h3>-->
+            <f:if condition="{afficheimage}">
+                <f:then>
+                  <media:image image="{afficheimage}"  class="image_affiche uk-thumbnail" alt="{alternativeText}" title="{title}"  maximumHeight="310" />
+                </f:then>
+                <f:else>
+                  <img class="image_affiche uk-thumbnail" src="http://dummyimage.com/210x310/000/ffffff.png" title="Dummy 210x310" alt="Dummy image" />
+                </f:else>
+            </f:if>
+        </div>
+    </div>
+    
+</section>
+<section class="film">
+    <div class="uk-block">
+        <h3 class="film"><i class="uk-icon-file-text-o uk-icon-medium uk-align-left"></i>Synopsis</h3>
+        <div class="contenu uk-column-medium-1-2">{neos:contentElement.editable(property: 'synopsis')}</div>
+    </div>
+    <div class="uk-block">
+        <h3 class="film"><i class="uk-icon-video-camera uk-icon-medium uk-align-left"></i>À propos du réalisateur</h3>
+        <div class="contenu">{neos:contentElement.editable(property: 'aproposreal')}</div>
+    </div>
+    <div class="uk-block">
+        <h3 class="film"><i class="uk-icon-film uk-icon-medium uk-align-left"></i>À propos du film</h3>
+        <f:if condition="{lien_cnc_prof}!=''">         
+            <p><b>Le dossier d'accompagnement sur le site du CNC :</b></p>
+        </f:if>     
+        <f:if condition="{lien_cnc_eleve}!=''">
+            <a class="link_white" target="_blank" href="{lien_cnc_eleve}"><button class="uk-button uk-button-primary uk-button-large"> > La fiche élève</button></a><br/><br/>
+        </f:if>
+        <f:if condition="{lien_cnc_prof}!=''">          
+                <a class="link_white" target="_blank" href="{lien_cnc_prof}"><button class="uk-button uk-button-primary uk-button-large"> > La fiche professeur</button></a><br/><br/>
+        </f:if>
+        <br/><p><b>Ressources du site 'Transmettre le cinéma' : </b></p>
+        <a class="link_white" target="_blank" href="{lien_transmettrecinema}"><button class="uk-button uk-button-primary uk-button-large"> > La fiche du film </button></a><br/><br/>
+        <br/>
+        <div class="contenu">{neos:contentElement.editable(property: 'autres_ressources')}</div>        
+    </div>
+</section>

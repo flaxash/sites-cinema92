@@ -1,0 +1,39 @@
+##########################################################################################
+## Désactiver les éléments inutiles
+##########################################################################################
+'Neos.NodeTypes:Headline':
+  abstract: TRUE
+  
+  
+'Neos.NodeTypes:Image':
+  abstract: TRUE
+  
+'Neos.NodeTypes:TextWithImage':
+  abstract: TRUE
+  
+  
+'Neos.NodeTypes:Menu':
+  abstract: TRUE
+  
+'Neos.NodeTypes:Column':
+  abstract: TRUE
+  
+'Neos.NodeTypes:TwoColumn':
+  abstract: TRUE
+  
+'Neos.NodeTypes:ThreeColumn':
+  abstract: TRUE
+
+'Neos.NodeTypes:FourColumn':
+  abstract: TRUE
+  
+'Neos.NodeTypes:Form':
+  abstract: TRUE
+  
+'Neos.NodeTypes:AssetList':
+  abstract: TRUE
+  
+'Neos.NodeTypes:ContentReferences':
+  abstract: TRUE
+
+  

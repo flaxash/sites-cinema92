@@ -1,0 +1,28 @@
+prototype(Canope92.Cinema:FilmArchive)  < prototype(Neos.Neos:Content) {
+        templatePath = 'resource://Canope92.Cinema/Private/Templates/NodeTypes/FilmArchive.html'
+        // Get the previous and the next Film by traversing to the node which preceds the current one.
+        previousFilm = ${q(documentNode).prev('[instanceof Canope92.Cinema:PageFilm]').get(0)}
+        nextFilm = ${q(documentNode).next('[instanceof Canope92.Cinema:PageFilm]').get(0)}
+        
+        titre = ${q(node).property('titre')}
+        theme = ${q(node).property('theme')}
+        realisateur = ${q(node).property('realisateur')}
+        genre = ${q(node).property('genre')}
+        topimage = ${q(node).property('topimage')}
+        afficheimage = ${q(node).property('afficheimage')}
+        producteur = ${q(node).property('producteur')}
+        musique = ${q(node).property('musique')}
+        duree = ${q(node).property('duree')}
+        pays = ${q(node).property('pays')}
+        annee = ${q(node).property('annee')}
+        synopsis = ${q(node).property('synopsis')}
+        aproposfilm = ${q(node).property('aproposfilm')}
+        aproposreal = ${q(node).property('aproposreal')}
+        lien_transmettrecinema = ${q(node).property('lien_transmettrecinema')}
+        lien_cnc_eleve = ${q(node).property('lien_cnc_eleve')}
+        lien_cnc_prof = ${q(node).property('lien_cnc_prof')}
+        /* Test pour une logique plus complexe mais sans succès
+        cnc_ressources = ${(lien_cnc_eleve=="" && lien_cnc_prof=="")?FALSE:TRUE}
+        */
+        autres_ressources = ${q(node).property('autres_ressources')}
+}

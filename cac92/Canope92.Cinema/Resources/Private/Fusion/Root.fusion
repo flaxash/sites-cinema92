@@ -1,0 +1,32 @@
+/**
+ * Root Fusion for the collegeaucinema92.fr site
+ */
+
+prototype(Canope92.Cinema:DefaultPage) < prototype(Neos.Neos:Page) {
+    head {
+        stylesheets.site = Neos.Fusion:Template {
+            templatePath = 'resource://Canope92.Cinema/Private/Templates/Page/Gabarit.html'
+            sectionName = 'stylesheets'
+        }
+
+        javascripts.site = Neos.Fusion:Template {
+            templatePath = 'resource://Canope92.Cinema/Private/Templates/Page/Gabarit.html'
+            sectionName = 'headScripts'
+        }
+    }
+
+    body {
+        templatePath = 'resource://Canope92.Cinema/Private/Templates/Page/Gabarit.html'
+        sectionName = 'body'
+        parts {
+            menu = Neos.Neos:Menu
+        }
+
+        javascripts.site = Neos.Fusion:Template {
+            templatePath = 'resource://Canope92.Cinema/Private/Templates/Page/Gabarit.html'
+            sectionName = 'bodyScripts'
+        }
+    }
+}
+
+include: NodeTypes/**/*

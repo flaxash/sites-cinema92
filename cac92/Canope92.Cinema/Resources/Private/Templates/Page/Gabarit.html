@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace fusion=Neos\Fusion\ViewHelpers}
+<html>
+<head>
+	<f:section name="stylesheets">
+		<!-- Put your stylesheet inclusions here, they will be included in your website by Fusion -->
+    <!-- FontAwesome CSS  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> 
+    <!-- UIKit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.26.1/css/uikit.almost-flat.min.css" />        
+    <!-- Magnetic template -->
+    <link rel="stylesheet" type="text/css" href="../../../Public/Styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../../Public/Styles/main.css">
+	</f:section>
+	<f:section name="headScripts">
+		<!-- Put your scripts inclusions for the head here, they will be included in your website by Fusion -->
+    <!-- JQUERY -->
+    <script type="text/javascript" src="../../../Public/JavaScript/jquery.js"></script> 
+    <!-- UIKit CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.26.1/js/uikit.min.js"></script>
+    <!-- Cinema -->
+    <script type="text/javascript" src="../../../Public/JavaScript/main.js"></script>
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-87655855-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+	</f:section>
+</head>
+<body>
+    
+<f:section name="body">
+<header>
+		<div class="logo">
+			<a href="/les-films.html">
+                <img src="../../../Public/Images/logoSite-01.png" title="Collège au Cinéma" alt="Collège au Cinéma"/>
+                <img src="../../../Public/Images/logoSite-02.png" title="Hauts-de-Seine" alt="92"/>
+            </a>
+		</div><!-- end logo -->
+
+		<div id="menu_icon"></div>
+		<nav>
+			<ul>
+				<li><a href="/les-films.html">Les films</a></li>
+				<li><a href="/actualites.html">Actualités</a></li>
+				<li><a href="/les-cinemas.html">Les cinémas</a></li>
+				<li><a href="/le-dispositif.html">Le dispositif</a></li>
+				<li><a href="http://0921824h.esidoc.fr/rubrique/view/id/98">Ressources</a></li>
+        <li><a href="/archives.html">Archives</a></li>
+			</ul>
+		</nav><!-- end navigation menu -->
+
+		<div class="footer clearfix">
+			<ul class="social clearfix">
+				<li><a href="/mentions.html" class="ml" data-title="Mentions"></a></li>
+        <li><a href="http://www.viaeduc.fr/group/3009" target="_blank" class="viaeduc" data-title="Viaéduc"></a></li>
+				<li><a href="https://twitter.com/canope_92" target="_blank" class="twitter" data-title="Twitter"></a></li>
+				<!--<li><a href="#" class="dribble" data-title="Dribble"></a></li>
+        <li><a href="#" class="behance" data-title="Behance"></a></li>
+				<li><a href="#" class="rss" data-title="RSS"></a></li>-->
+			</ul><!-- end social -->
+
+			<div class="rights">
+				<p>Copyright © 2018 Canopé 92</p>
+				<p>contacter le <a href="mailto:xavier.aubrun@reseau-canope.fr">webmestre</a></p>
+			</div><!-- end rights -->
+		</div ><!-- end footer -->
+	</header><!-- end header -->
+	<div class="main clearfix">
+    <nav class="menu">
+		  {parts.menu -> f:format.raw()}
+	  </nav>
+	  <div class="content">
+		  {content.main -> f:format.raw()}
+	  </div>
+  </div>
+</f:section>
+<f:section name="bodyScripts">
+	<!-- Put your scripts inclusions for the end of the body here, they will be included in your website by Fusion -->
+</f:section>
+</body>
+</html>

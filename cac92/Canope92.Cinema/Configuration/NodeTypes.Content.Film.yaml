@@ -1,0 +1,146 @@
+---
+#########################################################################################
+# Un node de type Content pour afficher les infos et ressources d'un film
+#########################################################################################
+
+'Canope92.Cinema:Film':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    label: 'Film du programme'
+    group: 'general'
+    inspector:
+      groups:
+        'images':
+          label: 'Images du film'
+          position: 1
+        'infos':
+          label: 'Infos sur le film'
+          position: 5
+  properties:
+    topimage:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Image du haut'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'images'
+    afficheimage:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Image affiche'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'images'
+    titre:
+      type: string
+      defaultValue: 'Titre'
+      ui:
+        label: 'Titre'
+        inlineEditable: TRUE
+    theme:
+      type: string
+      defaultValue: 'thématique de la sélection'
+      ui:
+        label: 'Thématique'
+        inlineEditable: TRUE
+    realisateur:
+      type: string
+      defaultValue: 'Réalisé par ...'
+      ui:
+        label: 'Realisateur'
+        inlineEditable: TRUE
+    genre:
+      type: string
+      defaultValue: 'Genre du film'
+      ui:
+        label: 'Genre'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+    producteur:
+      type: string
+      defaultValue: 'Produit par ...'
+      ui:
+        label: 'Producteur'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+    musique:
+      type: string
+      defaultValue: 'Musique de ...'
+      ui:
+        label: 'Musique'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+    duree:
+      type: string
+      defaultValue: 'Durée du film (h mn)'
+      ui:
+        label: 'Durée'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+    pays:
+      type: string
+      defaultValue: 'Pays'
+      ui:
+        label: 'Pays'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+    annee:
+      type: string
+      defaultValue: 'Année'
+      ui:
+        label: 'Année'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+    synopsis:
+      type: string
+      defaultValue: 'synopsis'
+      ui:
+        label: 'synopsis'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+    aproposfilm:
+      type: string
+      defaultValue: 'A propos du film'
+      ui:
+        label: 'A propos du film'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+    aproposreal:
+      type: string
+      defaultValue: 'A propos du réalisateur'
+      ui:
+        label: 'A propos du réalisateur'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+    lien_transmettrecinema:
+      type: string
+      defaultValue: 'lien sur le site Transmettre le cinéma'
+      ui:
+        label: 'Lien Transmettre le Cinéma'
+        inlineEditable: FALSE
+        inspector:
+          group: 'infos'
+    lien_cnc_eleve:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Lien CNC fiche élève'
+        inlineEditable: FALSE
+        inspector:
+          group: 'infos' 
+    lien_cnc_prof:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Lien CNC fiche prof'
+        inlineEditable: FALSE
+        inspector:
+          group: 'infos'
+    autres_ressources:
+      type: string
+      defaultValue: 'Autres ressources'
+      ui:
+        label: 'Autres ressources'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE

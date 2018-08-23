@@ -1,0 +1,22 @@
+{
+    "description": "",
+    "type": "neos-site",
+    "require": {
+        "neos/neos": "*",
+        "neos/nodetypes": "*"
+    },
+    "suggest": {
+        "neos/seo": "*"
+    },
+    "name": "canope92/cinema",
+    "autoload": {
+        "psr-4": {
+            "Canope92\\Cinema\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Canope92.Cinema"
+        }
+    }
+}
