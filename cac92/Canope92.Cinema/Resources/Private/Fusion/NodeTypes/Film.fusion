@@ -16,8 +16,13 @@ prototype(Canope92.Cinema:Film) < prototype(Neos.Neos:Content) {
         pays = ${q(node).property('pays')}
         annee = ${q(node).property('annee')}
         synopsis = ${q(node).property('synopsis')}
+        aproposfilm = ${q(node).property('aproposfilm')}
         aproposreal = ${q(node).property('aproposreal')}
         lien_transmettrecinema = ${q(node).property('lien_transmettrecinema')}
-        lien_enfantscinema = ${q(node).property('lien_enfantscinema')}
+        lien_cnc_eleve = ${q(node).property('lien_cnc_eleve')}
+        lien_cnc_prof = ${q(node).property('lien_cnc_prof')}
+        /* Test pour une logique plus complexe mais sans succès
+        cnc_ressources = ${(lien_cnc_eleve=="" && lien_cnc_prof=="")?FALSE:TRUE}
+        */
         autres_ressources = ${q(node).property('autres_ressources')}
 }

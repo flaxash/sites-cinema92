@@ -1,0 +1,105 @@
+---
+##########################################################################################
+## Un node de type Content pour créer une Actualité
+##########################################################################################
+
+'Canope92.Cinema:Actualite': 
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    label: 'Actualité sans image'
+    group: 'general'
+    inspector:
+      groups:
+        'actu':
+          label: i18n
+          position: 50
+        'image':
+          label: 'Image (325x325)'
+          position: 60
+  properties:
+    'titre':
+      type: string
+      defaultValue: 'Titre de cette actualité'
+      ui:
+        label: 'titre'
+        reloadIfChanged: TRUE
+        inlineEditable: TRUE
+        inspector:
+          group: 'actu'
+    'contenu':
+      type: string
+      defaultValue: 'Contenu de cette actualité'
+      ui:
+        label: 'contenu'
+        reloadIfChanged: TRUE
+        inlineEditable: TRUE
+        inspector:
+          group: 'actu'
+    'plus':
+      type: string
+      defaultValue: 'En savoir plus'
+      ui:
+        label: 'lien en savoir plus'
+        reloadIfChanged: TRUE
+        inlineEditable: TRUE
+        inspector:
+          group: 'actu'
+    'lienPresent':
+      type: boolean
+      ui:
+        label: 'Présence du bouton > En savoir plus'
+        reloadIfChanged: true
+        inspector:
+          group: 'actu'
+
+##########################################################################################
+## différents types d'actualités pour des mises en forme personnalisées
+##########################################################################################
+
+
+'Canope92.Cinema:ActualiteImageGauche':   
+  superTypes:
+    'Canope92.Cinema:Actualite': TRUE
+  ui:
+    label: 'Actualité avec image à gauche'
+    group: 'general'
+    inspector:
+      groups:
+        'actu':
+          label: i18n
+          position: 50
+  properties:
+    'actu_image':
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Image'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'image'
+
+##########################################################################################
+
+'Canope92.Cinema:ActualiteImageHaut':   
+  superTypes:
+    'Canope92.Cinema:Actualite': TRUE
+  ui:
+    label: 'Actualité avec image en haut'
+    group: 'general'
+    inspector:
+      groups:
+        'actu':
+          label: i18n
+          position: 50
+        'image':
+          label: 'Image (1300x325)'
+          position: 60
+  properties:
+    'actu_image':
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Image'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'image'
+    

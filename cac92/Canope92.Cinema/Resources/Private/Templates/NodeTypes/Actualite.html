@@ -1,0 +1,17 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace media=Neos\Media\ViewHelpers}
+<div class="uk-grid uk-grid-large">
+    <div class="uk-width-medium-1-1">
+        <article class="uk-article">
+            <h2 class="uk-article-title actu">{neos:contentElement.editable(property: 'titre')}</h2>
+            <div class="actu contenu">{neos:contentElement.editable(property: 'contenu')}</div><br/>
+            <f:if condition="{lienPresent}">
+                <f:then>
+                  <button class="uk-button uk-button-primary uk-button-large"><a class="liendoc" href="{plus}" > > En savoir plus </a></button>
+                </f:then>
+            </f:if>
+    </article>
+    </div>
+</div>
+<br/>
+<hr />

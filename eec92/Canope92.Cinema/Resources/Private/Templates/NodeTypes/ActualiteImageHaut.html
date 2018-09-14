@@ -1,0 +1,31 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace media=Neos\Media\ViewHelpers}
+<div class="uk-grid uk-grid-large">
+    <div class="uk-width-medium-1-1 uk-container-center">
+        <f:if condition="{actu_image}">
+            <f:then>
+              <media:image image="{actu_image}"  class="image_top_article" alt="{alternativeText}" title="{title}"  maximumHeight="250" />
+            </f:then>
+            <f:else>
+              <img class="image_top_article" src="http://dummyimage.com/1300x250/000/ffffff.png" title="Dummy 1300x250" alt="Dummy image" />
+            </f:else>
+        </f:if>
+    </div>
+</div>
+<div class="uk-grid uk-grid-large">
+    <div class="uk-width-medium-1-1">
+        <article class="uk-article">
+            <h2 class="uk-article-title actu">{neos:contentElement.editable(property: 'titre')}</h2>
+           
+            <div class="contenu">{neos:contentElement.editable(property: 'contenu')}</div><br/>
+            <f:if condition="{lienPresent}">
+                <f:then>
+                  <button class="uk-button uk-button-primary uk-button-large"><a class="liendoc" href="{plus}" > > En savoir plus </a></button>
+                </f:then>
+            </f:if>
+    </article>
+    </div>
+</div>
+<br/>
+<hr />
+

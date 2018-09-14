@@ -99,13 +99,6 @@
         label: 'synopsis'
         inlineEditable: TRUE
         reloadIfChanged: TRUE
-    aproposfilm:
-      type: string
-      defaultValue: 'A propos du film'
-      ui:
-        label: 'A propos du film'
-        inlineEditable: TRUE
-        reloadIfChanged: TRUE
     aproposreal:
       type: string
       defaultValue: 'A propos du réalisateur'
@@ -121,19 +114,11 @@
         inlineEditable: FALSE
         inspector:
           group: 'infos'
-    lien_cnc_eleve:
+    lien_enfantscinema:
       type: string
-      defaultValue: ''
+      defaultValue: 'lien Nanouk'
       ui:
-        label: 'Lien CNC fiche élève'
-        inlineEditable: FALSE
-        inspector:
-          group: 'infos' 
-    lien_cnc_prof:
-      type: string
-      defaultValue: ''
-      ui:
-        label: 'Lien CNC fiche prof'
+        label: 'Lien Nanouk'
         inlineEditable: FALSE
         inspector:
           group: 'infos'

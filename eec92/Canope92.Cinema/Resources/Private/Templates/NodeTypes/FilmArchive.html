@@ -33,7 +33,7 @@
 						<f:if condition="{previousFilm}">
                         <li><a href="{neos:uri.node(node: previousFilm)}" class="previous" data-title="Précédent"></a></li>
                         </f:if>
-						<li><a href="les-films.html" class="grid" data-title="Tous les films"></a></li>
+						<li><a href="archives.html" class="grid" data-title="Tous les films"></a></li>
                         <f:if condition="{nextFilm}">
 						<li><a href="{neos:uri.node(node: nextFilm)}" class="next" data-title="Suivant"></a></li>
                         </f:if>
@@ -47,9 +47,9 @@
     <div>
         {neos:contentElement.editable(property: 'realisateur', tag: 'h3')}
     </div>
-    <div>
+    <!--<div>
         <h3 class="uk-text-muted">Thématique : {neos:contentElement.editable(property: 'theme', tag: 'span')}</h3>
-    </div>
+    </div>-->
     <div>
         <h3 class="film"><i class="uk-icon-exclamation uk-icon-medium uk-align-left"></i>Disponible au prêt en médiathèque</h3>
     </div>
@@ -101,19 +101,9 @@
         <div class="contenu">{neos:contentElement.editable(property: 'aproposreal')}</div>
     </div>
     <div class="uk-block">
-        <h3 class="film"><i class="uk-icon-film uk-icon-medium uk-align-left"></i>À propos du film</h3>
-        <f:if condition="{lien_cnc_prof}!=''">         
-            <p><b>Le dossier d'accompagnement sur le site du CNC :</b></p>
-        </f:if>     
-        <f:if condition="{lien_cnc_eleve}!=''">
-            <a class="link_white" target="_blank" href="{lien_cnc_eleve}"><button class="uk-button uk-button-primary uk-button-large"> > La fiche élève</button></a><br/><br/>
-        </f:if>
-        <f:if condition="{lien_cnc_prof}!=''">          
-                <a class="link_white" target="_blank" href="{lien_cnc_prof}"><button class="uk-button uk-button-primary uk-button-large"> > La fiche professeur</button></a><br/><br/>
-        </f:if>
-        <br/><p><b>Ressources du site 'Transmettre le cinéma' : </b></p>
-        <a class="link_white" target="_blank" href="{lien_transmettrecinema}"><button class="uk-button uk-button-primary uk-button-large"> > La fiche du film </button></a><br/><br/>
-        <br/>
-        <div class="contenu">{neos:contentElement.editable(property: 'autres_ressources')}</div>        
+         <h3 class="film"><i class="uk-icon-film uk-icon-medium uk-align-left"></i>À propos du film</h3>
+        <a class="link_white" target="_blank" href="{lien_enfantscinema}"><button class="uk-button uk-button-primary uk-button-large"> > La fiche du film sur le site "Nanouk"</button></a><br/><br/>
+        <a class="link_white" target="_blank" href="{lien_transmettrecinema}"><button class="uk-button uk-button-primary uk-button-large"> > La fiche du film sur le site "Transmettre le cinéma"</button></a><br/>
+        <div class="contenu">{neos:contentElement.editable(property: 'autres_ressources')}</div>
     </div>
 </section>

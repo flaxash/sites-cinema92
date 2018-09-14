@@ -1,0 +1,13 @@
+prototype(Canope92.Cinema:ActualiteImageGauche) < prototype(Neos.Neos:Content) {
+        templatePath = 'resource://Canope92.Cinema/Private/Templates/NodeTypes/ActualiteImageGauche.html'  
+        
+        actu_image = ${q(node).property('actu_image')}
+        
+        titre = ${q(node).property('titre')}
+       
+        contenu = ${q(node).property('contenu')}
+        
+        plus = ${q(node).property('plus')}
+        lienPresent = ${q(node).property('lienPresent')}
+        
+}
