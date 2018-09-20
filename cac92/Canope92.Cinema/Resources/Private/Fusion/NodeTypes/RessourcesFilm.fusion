@@ -1,0 +1,7 @@
+prototype(Canope92.Cinema:RessourcesFilm) < prototype(Neos.NodeTypes:Text) {
+	lien_transmettrecinema = ${q(node).property('lien_transmettrecinema')}
+  lien_cnc_eleve = ${q(node).property('lien_cnc_eleve')}
+  lien_cnc_prof = ${q(node).property('lien_cnc_prof')}
+  
+  text = ${q(node).property('text')}
+}

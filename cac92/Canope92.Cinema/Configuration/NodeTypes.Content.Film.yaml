@@ -44,6 +44,13 @@
       ui:
         label: 'Thématique'
         inlineEditable: TRUE
+    disponibilite:
+      type: boolean
+      ui:
+        label: 'Disponibilité en médiathèque'
+        reloadIfChanged: true
+        inspector:
+          group: 'actu'
     realisateur:
       type: string
       defaultValue: 'Réalisé par ...'
@@ -99,48 +106,6 @@
         label: 'synopsis'
         inlineEditable: TRUE
         reloadIfChanged: TRUE
-    aproposfilm:
-      type: string
-      defaultValue: 'A propos du film'
-      ui:
-        label: 'A propos du film'
-        inlineEditable: TRUE
-        reloadIfChanged: TRUE
-    aproposreal:
-      type: string
-      defaultValue: 'A propos du réalisateur'
-      ui:
-        label: 'A propos du réalisateur'
-        inlineEditable: TRUE
-        reloadIfChanged: TRUE
-    lien_transmettrecinema:
-      type: string
-      defaultValue: 'lien sur le site Transmettre le cinéma'
-      ui:
-        label: 'Lien Transmettre le Cinéma'
-        inlineEditable: FALSE
-        inspector:
-          group: 'infos'
-    lien_cnc_eleve:
-      type: string
-      defaultValue: ''
-      ui:
-        label: 'Lien CNC fiche élève'
-        inlineEditable: FALSE
-        inspector:
-          group: 'infos' 
-    lien_cnc_prof:
-      type: string
-      defaultValue: ''
-      ui:
-        label: 'Lien CNC fiche prof'
-        inlineEditable: FALSE
-        inspector:
-          group: 'infos'
-    autres_ressources:
-      type: string
-      defaultValue: 'Autres ressources'
-      ui:
-        label: 'Autres ressources'
-        inlineEditable: TRUE
-        reloadIfChanged: TRUE
+    
+
+  

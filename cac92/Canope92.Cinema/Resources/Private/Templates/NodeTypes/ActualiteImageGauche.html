@@ -15,7 +15,7 @@
         <article class="uk-article">
             <h2 class="uk-article-title actu">{neos:contentElement.editable(property: 'titre')}</h2>
     
-            <div class="contenu">{neos:contentElement.editable(property: 'contenu')}</div><br/>
+            <div class="contenu"><neos:contentElement.editable property="text" /></div><br/>
             <f:if condition="{lienPresent}">
                 <f:then>
                   <button class="uk-button uk-button-primary uk-button-large"><a class="liendoc" href="{plus}" > > En savoir plus </a></button>

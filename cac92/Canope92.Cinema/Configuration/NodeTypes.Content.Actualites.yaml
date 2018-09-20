@@ -1,11 +1,6 @@
----
-##########################################################################################
-## Un node de type Content pour créer une Actualité
-##########################################################################################
-
 'Canope92.Cinema:Actualite': 
   superTypes:
-    'Neos.Neos:Content': TRUE
+    'Neos.NodeTypes:Text': TRUE
   ui:
     label: 'Actualité sans image'
     group: 'general'
@@ -27,13 +22,11 @@
         inlineEditable: TRUE
         inspector:
           group: 'actu'
-    'contenu':
-      type: string
-      defaultValue: 'Contenu de cette actualité'
+    'lienPresent':
+      type: boolean
       ui:
-        label: 'contenu'
-        reloadIfChanged: TRUE
-        inlineEditable: TRUE
+        label: 'Présence du bouton > En savoir plus'
+        reloadIfChanged: true
         inspector:
           group: 'actu'
     'plus':
@@ -43,13 +36,6 @@
         label: 'lien en savoir plus'
         reloadIfChanged: TRUE
         inlineEditable: TRUE
-        inspector:
-          group: 'actu'
-    'lienPresent':
-      type: boolean
-      ui:
-        label: 'Présence du bouton > En savoir plus'
-        reloadIfChanged: true
         inspector:
           group: 'actu'
 

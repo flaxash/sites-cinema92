@@ -1,13 +1,10 @@
-prototype(Canope92.Cinema:ActualiteImageHaut) < prototype(Neos.Neos:Content) {
-        templatePath = 'resource://Canope92.Cinema/Private/Templates/NodeTypes/ActualiteImageHaut.html'  
-        
+prototype(Canope92.Cinema:ActualiteImageHaut) < prototype(Neos.NodeTypes:Text) { 
         actu_image = ${q(node).property('actu_image')}
-        
+
         titre = ${q(node).property('titre')}
-    
-        contenu = ${q(node).property('contenu')}
-        
         plus = ${q(node).property('plus')}
         lienPresent = ${q(node).property('lienPresent')}
+        
+        text = ${q(node).property('text')}
         
 }

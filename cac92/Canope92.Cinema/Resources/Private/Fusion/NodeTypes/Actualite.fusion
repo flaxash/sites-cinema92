@@ -1,11 +1,9 @@
-prototype(Canope92.Cinema:Actualite) < prototype(Neos.Neos:Content) {
-        templatePath = 'resource://Canope92.Cinema/Private/Templates/NodeTypes/Actualite.html'  
+prototype(Canope92.Cinema:Actualite) < prototype(Neos.NodeTypes:Text) {  
 
         titre = ${q(node).property('titre')}
-
-        contenu = ${q(node).property('contenu')}
-        
         plus = ${q(node).property('plus')}
         lienPresent = ${q(node).property('lienPresent')}
+        
+        text = ${q(node).property('text')}
         
 }

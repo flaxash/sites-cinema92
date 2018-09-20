@@ -1,0 +1,42 @@
+---
+##########################################################################################
+## Un node de type Text pour les ressources du film
+##########################################################################################
+
+'Canope92.Cinema:RessourcesFilm': 
+  superTypes:
+    'Neos.NodeTypes:Text': TRUE
+  ui:
+    label: 'Ressources pour le film'
+    group: 'general'
+
+    inspector:
+      groups:
+        'infos':
+          label: 'Infos sur le film'
+          position: 1
+  properties:   
+    lien_transmettrecinema:
+      type: string
+      defaultValue: 'lien sur le site Transmettre le cinéma'
+      ui:
+        label: 'Lien Transmettre le Cinéma'
+        inlineEditable: FALSE
+        inspector:
+          group: 'infos'
+    lien_cnc_eleve:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Lien CNC fiche élève'
+        inlineEditable: FALSE
+        inspector:
+          group: 'infos' 
+    lien_cnc_prof:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Lien CNC fiche prof'
+        inlineEditable: FALSE
+        inspector:
+          group: 'infos'
