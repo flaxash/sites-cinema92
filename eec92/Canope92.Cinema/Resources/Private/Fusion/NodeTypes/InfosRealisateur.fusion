@@ -1,0 +1,3 @@
+prototype(Canope92.Cinema:InfosRealisateur) < prototype(Neos.NodeTypes:Text) {
+	text = ${q(node).property('text')}
+}

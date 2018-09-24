@@ -50,7 +50,7 @@
         label: 'Disponibilité en médiathèque'
         reloadIfChanged: true
         inspector:
-          group: 'actu'
+          group: 'infos'
     realisateur:
       type: string
       defaultValue: 'Réalisé par ...'

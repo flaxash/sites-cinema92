@@ -1,0 +1,11 @@
+---
+##########################################################################################
+## Un node de type Text pour les infos du réalisateur
+##########################################################################################
+
+'Canope92.Cinema:InfosRealisateur': 
+  superTypes:
+    'Neos.NodeTypes:Text': TRUE
+  ui:
+    label: 'Infos sur le réalisateur'
+    group: 'general'

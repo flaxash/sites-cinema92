@@ -1,0 +1,34 @@
+---
+##########################################################################################
+## Un node de type Text pour les ressources du film
+##########################################################################################
+
+'Canope92.Cinema:RessourcesFilm': 
+  superTypes:
+    'Neos.NodeTypes:Text': TRUE
+  ui:
+    label: 'Ressources pour le film'
+    group: 'general'
+
+    inspector:
+      groups:
+        'infos':
+          label: 'Infos sur le film'
+          position: 1
+  properties:   
+    lien_transmettrecinema:
+      type: string
+      defaultValue: 'lien sur le site Transmettre le cinéma'
+      ui:
+        label: 'Lien Transmettre le Cinéma'
+        inlineEditable: FALSE
+        inspector:
+          group: 'infos'
+    lien_enfantscinema:
+      type: string
+      defaultValue: 'lien Nanouk'
+      ui:
+        label: 'Lien Nanouk'
+        inlineEditable: FALSE
+        inspector:
+          group: 'infos'

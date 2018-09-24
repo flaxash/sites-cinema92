@@ -6,6 +6,7 @@ prototype(Canope92.Cinema:FilmArchive)  < prototype(Neos.Neos:Content) {
         
         titre = ${q(node).property('titre')}
         theme = ${q(node).property('theme')}
+        disponibilite = ${q(node).property('disponibilite')}
         realisateur = ${q(node).property('realisateur')}
         genre = ${q(node).property('genre')}
         topimage = ${q(node).property('topimage')}
@@ -16,8 +17,5 @@ prototype(Canope92.Cinema:FilmArchive)  < prototype(Neos.Neos:Content) {
         pays = ${q(node).property('pays')}
         annee = ${q(node).property('annee')}
         synopsis = ${q(node).property('synopsis')}
-        aproposreal = ${q(node).property('aproposreal')}
-        lien_transmettrecinema = ${q(node).property('lien_transmettrecinema')}
-        lien_enfantscinema = ${q(node).property('lien_enfantscinema')}
-        autres_ressources = ${q(node).property('autres_ressources')}
+        
 }
