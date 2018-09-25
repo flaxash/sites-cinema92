@@ -1,0 +1,18 @@
+---
+##########################################################################################
+## Un node de type Text pour les formations du dispositif
+##########################################################################################
+
+'Canope92.Cinema:Formations': 
+  superTypes:
+    'Neos.NodeTypes:Text': TRUE
+  ui:
+    label: 'Dispositif - Formations'
+    group: 'general'
+
+    inspector:
+      groups:
+        'infos':
+          label: 'Infos sur les formations du dispositif'
+          position: 1
+  

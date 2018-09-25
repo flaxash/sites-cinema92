@@ -1,0 +1,18 @@
+---
+##########################################################################################
+## Un node de type Text pour les textes officiels du dispositif
+##########################################################################################
+
+'Canope92.Cinema:TextesOfficiels': 
+  superTypes:
+    'Neos.NodeTypes:Text': TRUE
+  ui:
+    label: 'Dispositif - Textes Officiels'
+    group: 'general'
+
+    inspector:
+      groups:
+        'infos':
+          label: 'Textes officiels du dispositif'
+          position: 1
+  

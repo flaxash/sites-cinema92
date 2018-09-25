@@ -1,0 +1,18 @@
+---
+##########################################################################################
+## Un node de type Text pour les bilans du dispositif
+##########################################################################################
+
+'Canope92.Cinema:Bilans': 
+  superTypes:
+    'Neos.NodeTypes:Text': TRUE
+  ui:
+    label: 'Dispositif - Comptes rendus et bilans'
+    group: 'general'
+
+    inspector:
+      groups:
+        'infos':
+          label: 'Comptes rendus et bilans du dispositif'
+          position: 1
+  

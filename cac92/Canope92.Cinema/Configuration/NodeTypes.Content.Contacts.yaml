@@ -1,0 +1,18 @@
+---
+##########################################################################################
+## Un node de type Text pour les contacts du dispositif
+##########################################################################################
+
+'Canope92.Cinema:Contacts': 
+  superTypes:
+    'Neos.NodeTypes:Text': TRUE
+  ui:
+    label: 'Dispositif - Contacts'
+    group: 'general'
+
+    inspector:
+      groups:
+        'infos':
+          label: 'Contacts du dispositif'
+          position: 1
+  
